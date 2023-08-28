@@ -20,7 +20,7 @@ public class UserDaoJDBCImpl implements UserDao {
     private static final String GET = "SELECT * FROM users";
     private static final String CLEAN = "TRUNCATE TABLE users";
 
-    Connection connection = (Connection) Util.getConnection();
+    Connection connection = Util.getConnection();
 
     public UserDaoJDBCImpl() {
 

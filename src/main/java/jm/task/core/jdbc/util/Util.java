@@ -19,7 +19,7 @@ public class Util {
     private static final String USERNAME = "root";
     private static final String PASSWORD = "root";
 
-    /*public static Connection getConnection() {
+    public static Connection getConnection() {
         Connection connection = null;
         try {
             connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
@@ -27,14 +27,14 @@ public class Util {
             e.printStackTrace();
         }
         return connection;
-    }*/
+    }
 
     // Hibernate
 
     private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
 
     private static SessionFactory sessionFactory = null;
-    public static SessionFactory getConnection() {
+    public static SessionFactory getSessionFactory() {
         try {
             Configuration configuration = new Configuration()
                     .setProperty("hibernate.connection.driver_class", DRIVER)
